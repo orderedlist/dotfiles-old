@@ -1,4 +1,4 @@
-alias reload='. ~/.bashrc'
+alias reload='. ~/.bash_profile'
 alias ea="$EDITOR ~/bin/dotfiles/bash/aliases && reload"
 alias ee="$EDITOR ~/bin/dotfiles/bash/env && reload"
 
