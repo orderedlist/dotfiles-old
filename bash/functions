@@ -1,5 +1,5 @@
 # grep through history
-function hf() { 
+function hf() {
 	history | grep $1
 }
 
@@ -26,14 +26,14 @@ function slow_port {
   then port=80
   else port=$1
   fi
-  
+
   # Slow the ports.
   sudo ipfw pipe 1 config bw 100KByte/s
   sudo ipfw add 1 pipe 1 src-port $port
   sudo ipfw add 1 pipe 1 dst-port $port
   echo "Port $port succesfully slowed."
 }
- 
+
 function unslow_port {
   sudo ipfw delete 1
   echo "Port succesfully un-slowed."
@@ -43,3 +43,13 @@ function unslow_port {
 function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
+_apex()  {
+  COMPREPLY=()
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  local opts="$(apex autocomplete -- ${COMP_WORDS[@]:1})"
+  COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+  return 0
+}
+
+complete -F _apex apex
