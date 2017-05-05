@@ -6,32 +6,12 @@ alias droid='say -v "Cellos"'
 
 alias '..'='cd ..'
 
-alias v='vagrant'
-
 # Bundler
 alias bx='bundle exec'
 alias bo='bundle open'
 alias bu='bundle update'
 
-alias pass='passenger start'
-
 alias h='heroku'
-alias pam='polyamory'
-alias repos='cd ~/repos'
-alias proj='cd ~/projects'
-alias clone='cd ~/repos && git clone $1'
-
-# Projects
-alias sp='cd ~/projects/speakerdeck'
-alias ga='cd ~/projects/gauges'
-alias harm='cd ~/projects/harmony'
-alias mm='cd ~/projects/mongomapper'
-alias ad='cd ~/projects/adapter'
-alias ts='cd ~/projects/toystore'
-alias tmo='cd ~/projects/toystore-mongo'
-alias plu='cd ~/projects/plucky'
-alias joint='cd ~/projects/joint'
-alias bonds='cd ~/projects/bonds'
 
 # General
 alias l='ls -lah'
@@ -72,10 +52,6 @@ alias redstop='launchctl unload -w ~/Library/LaunchAgents/io.redis.redis-server.
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
-# SVN
-alias svnclear='find . -name .svn -print0 | xargs -0 rm -rf'
-alias svnaddall='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
-
 # RUBY
 alias ge='gem open' # gem install gem-browse
 alias irb='irb --readline -r irb/completion'
@@ -89,10 +65,6 @@ alias rt='rake -T'
 alias restart='touch tmp/restart.txt'
 alias migrate='rake db:migrate db:test:prepare'
 alias remigrate='rake db:drop db:create db:migrate'
-
-#RVM
-alias r8='rvm use ree'
-alias r9='rvm use 1.9.2'
 
 # Fonts
 alias edit_font='ftxdumperfuser -t hhea -A d'
