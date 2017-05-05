@@ -3,7 +3,7 @@ export LC_CTYPE=en_US.UTF-8     # for textmate
 export EDITOR='atom -w'         # set textmate as default editor
 export HISTCONTROL=erasedups
 
-export RUBY_HEAP_MIN_SLOTS=800000
+export RUBY_GC_HEAP_INIT_SLOTS=800000
 export RUBY_HEAP_FREE_MIN=100000
 export RUBY_HEAP_SLOTS_INCREMENT=300000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
